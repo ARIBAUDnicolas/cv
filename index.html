@@ -21,75 +21,8 @@
     <p>Je vien d'un ans d'IUT Réseau et Télécom, j'avais passé un Bac STI2D systeme informatique et numérique avant ça.<p>
     <p>Même si je suis un trés gros joueur je suis aussi un peu un créateur, notament sur le créateur de map de AOE 1 et 2 où j'ai créé plusieurs campagnes<p>
     <p>J'ai aussi fait quelques petit mod sur minecraft et Synthetic, surtout car c'était simple mais il y as des modification de code a faire donc j'en parle<p>
-    <p>Et je me suis inscrit a l'ETPA pour tenter de réaliser mon rêve : travailler sur la produtcion d'un Age of Empire ou d'un Heroes of Might and Magic.<p><br><br><br><br>
+    <p>Et je me suis inscrit a l'ETPA pour tenter de réaliser mon rêve : travailler sur la produtcion d'un Age of Empire ou d'un Heroes of Might and Magic.<p><br>
     <p>regardez le cv de <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">David Marcelone</a>, c'est intéressant.</p>
-<script>
-    var config = {
-        type: Phaser.AUTO,
-        width: 1300,
-        height: 700,
-        physics: {
-            default: 'arcade',
-            arcade: {
-                gravity: { y: 0 }
-            }
-        },
-        scene: {
-            preload: preload,
-            create: create
-        }
-    };
-
-    var game = new Phaser.Game(config);
-
-    function preload ()
-    {
-        this.load.image('goku', 'https://cdnb.artstation.com/p/assets/images/images/000/345/491/large/hannes-ferreira-gokukameha-final.jpg?1418118345');
-        this.load.image('debut', 'https://raw.githubusercontent.com/ARIBAUDnicolas/cv/main/image/yellow.png');
-        this.load.image('kameha', 'https://raw.githubusercontent.com/ARIBAUDnicolas/cv/main/image/blue.png');
-        this.load.image('particle', 'https://raw.githubusercontent.com/ARIBAUDnicolas/cv/main/image/yellow.png');
-    }
-
-    function create ()
-    {
-        this.add.image(420, 350, 'goku');
-
-        var particles = this.add.particles('debut');
-
-        var emitter = particles.createEmitter();
-
-        emitter.setPosition(640, 200);
-        emitter.setSpeed(300);
-        emitter.setBlendMode(Phaser.BlendModes.ADD);
-
-        var kameha = this.physics.add.image(700, 285, 'kameha');
-
-        var particles = this.add.particles('kameha');
-        var emitter = particles.createEmitter({
-            lifespan: 2000,
-            speed: { min: 1050, max: 2000 },
-            angle: 180,
-            scale: { start: 2.4, end: 2.4 },
-            quantity: 0.4,
-            blendMode: 'ADD'
-        });
-        emitter.startFollow(kameha);
-
-        var particle = this.physics.add.image(620, 275, 'particle');
-
-        var particles = this.add.particles('particle');
-        var emitter = particles.createEmitter({
-            lifespan: 2000,
-            speed: { min: 1050, max: 2000 },
-            angle: 180,
-            scale: { start: 1.4, end: 4.4 },
-            quantity: 0.2,
-            blendMode: 'ADD'
-        });
-        emitter.startFollow(particle);
-    }
-
-</script>
 
 </body>
 </html>
