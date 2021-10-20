@@ -1,8 +1,12 @@
-background-color: black;
+
 
 body {
     color: white;
+    background-color: #616161;
 }
 h1 {
     size: 30px;
+}
+a {
+    color: aliceblue;
 }
